@@ -13,7 +13,7 @@ angular
 	.config(function($routeProvider, $locationProvider) {
 			$routeProvider
 				.when('/', {
-					templateUrl: 'ng-app/home/Home.view.html'
+					templateUrl: 'ng-app/rsvp/RSVP.view.html'
 				})
 				.otherwise({
 					redirectTo: '/'

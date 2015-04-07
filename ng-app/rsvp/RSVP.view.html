@@ -1,6 +1,4 @@
 <article ng-controller="RSVPCtrl">
 	<h1>{{event.title}}</h1>
-	<p class="lead">
-		{{event.description}}
-	</p>
+	<div ng-bind-html="event.description | trustAsHtml"></div>
 </article>

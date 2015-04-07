@@ -1,8 +1,8 @@
 /***
  * RSVP Controller
  *
- * Get app module
- * Setup controller with minification-safe injections
+ * @getter: get app module
+ * @controller: Setup RSVP controller with minification-safe injections
  *
  * @param $scope
  */

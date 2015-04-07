@@ -1,8 +1,8 @@
 /***
  * trustAsHtml filter
  *
- * @getter: call module we defined in startup.js 'myApp'
- * Inject $sce (Strict Contextual Escaping) and use trustAsHtml
+ * @getter: get app module
+ * @filter: Inject $sce (Strict Contextual Escaping) and use trustAsHtml
  */
 
 angular

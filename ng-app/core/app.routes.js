@@ -1,7 +1,7 @@
 /***
  * Routes
  *
- * @getter: call module we defined in startup.js 'myApp'
+ * @getter: get app module
  * @config function (inject dependencies)
  * 	- routing for our app
  * 	- enable HTML5 mode (to remove /# from URL)

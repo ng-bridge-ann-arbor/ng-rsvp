@@ -1,3 +1,10 @@
+/***
+ * getData service
+ *
+ * @getter: get app module
+ * @service: get local JSON file
+ */
+
 angular
 	.module('myApp')
 	.service('getData', [

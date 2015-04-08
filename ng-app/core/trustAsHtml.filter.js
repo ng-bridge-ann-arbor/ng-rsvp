@@ -1,8 +1,8 @@
 /***
  * trustAsHtml filter
  *
- * @getter: get app module
- * @filter: Inject $sce (Strict Contextual Escaping) and use trustAsHtml
+ * Escape HTML when using ng-bind-html
+ * ng-bind-html="stringOfHTML | trustAsHtml"
  */
 
 angular

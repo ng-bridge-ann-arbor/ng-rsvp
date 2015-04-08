@@ -1,8 +1,7 @@
 /***
  * getData service
  *
- * @getter: get app module
- * @service: get local JSON file
+ * Access the local data JSON to retrieve event data
  */
 
 angular

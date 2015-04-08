@@ -1,10 +1,5 @@
 /***
  * RSVP Controller
- *
- * @getter: get app module
- * @controller: Setup RSVP controller with minification-safe injections
- *
- * @param $scope
  */
 
 angular
@@ -16,12 +11,10 @@ angular
 		function($scope, getData, $location) {
 
 			/***
-			 * @function getData.eventData()
-			 *
 			 * Fetch event data from local JSON
 			 *
-			 * @param: success callback function
-			 * @returns: event data
+			 * @param {function} success callback function
+			 * @returns {object} event data
 			 */
 			getData.eventData(function(event) {
 				console.log(event);
@@ -31,8 +24,6 @@ angular
 				$scope.event = event;
 
 				/***
-				 * @function sendMail()
-				 *
 				 * Form submit function to email the event contact
 				 */
 				$scope.sendMail = function() {

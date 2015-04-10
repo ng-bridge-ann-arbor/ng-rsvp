@@ -10,7 +10,16 @@ angular
 	.config(function($routeProvider, $locationProvider) {
 			$routeProvider
 				.when('/', {
-					templateUrl: 'ng-app/rsvp/RSVP.view.html'
+					templateUrl: 'ng-app/home/Home.view.html',
+					controller: 'HomeCtrl'
+				})
+				.when('/events', {
+					templateUrl: 'ng-app/events/EventsListing.view.html',
+					controller: 'EventsListingCtrl'
+				})
+				.when('/event/:eid', {
+					templateUrl: 'ng-app/events/EventDetail.view.html',
+					controller: 'EventDetailCtrl'
 				})
 				.otherwise({
 					redirectTo: '/'

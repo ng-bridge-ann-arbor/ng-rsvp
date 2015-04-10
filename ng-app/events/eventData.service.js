@@ -6,14 +6,14 @@
 
 angular
 	.module('myApp')
-	.service('getData', [
+	.service('eventData', [
 		'$http',
 		function($http) {
-			this.eventData = function(callback) {
+			this.get = function(callback) {
 				return $http
 					.get('/ng-app/data/event.data.json')
 					.success(callback)
 					.error(function() { console.log('There was an error getting event data.'); });
-			}
+			};
 		}
 	]);

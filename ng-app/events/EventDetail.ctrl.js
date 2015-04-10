@@ -1,14 +1,9 @@
-/***
- * RSVP Controller
- */
-
 angular
 	.module('myApp')
-	.controller('RSVPCtrl', [
+	.controller('EventDetailCtrl', [
 		'$scope',
-		'getData',
-		'$location',
-		function($scope, getData, $location) {
+		'eventData',
+		function($scope, eventData) {
 
 			/***
 			 * Fetch event data from local JSON
@@ -16,7 +11,7 @@ angular
 			 * @param {function} success callback function
 			 * @returns {object} event data
 			 */
-			getData.eventData(function(event) {
+			eventData.get(function(event) {
 				console.log(event);
 
 				// TODO: get form results and format them nicely for the email body
@@ -28,8 +23,8 @@ angular
 				 */
 				$scope.sendMail = function() {
 					var link =	'mailto:' + event.contact +
-								'&subject=' + event.title + ' RSVP' +
-								'&body='; // + FORMATTED FORM RESULTS
+						'&subject=' + event.title + ' RSVP' +
+						'&body='; // + FORMATTED FORM RESULTS
 
 					$location.href = link;
 				};

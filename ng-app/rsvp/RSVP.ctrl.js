@@ -4,8 +4,12 @@ angular
 		'$scope',
 		'eventData',
 		'$routeParams',
-		function($scope, eventData, $routeParams) {
-			var _eventID = $routeParams.eid;
+		'$window',
+		function($scope, eventData, $routeParams, $window) {
+			var eventID = $routeParams.eid;
+
+			$scope.guest = {};
+			$scope.guest.guests = 1;
 
 			/***
 			 * Fetch event data from local JSON
@@ -14,7 +18,7 @@ angular
 			 * @returns {object} event data
 			 */
 			eventData.get(function(data) {
-				$scope.event = data[_eventID];
+				$scope.event = data[eventID];
 
 				console.log($scope.event);
 
@@ -22,11 +26,11 @@ angular
 				 * Form submit function to email the event contact
 				 */
 				$scope.sendMail = function() {
-					var link =  'mailto:' + $scope.event.contact +
-						'&subject=' + $scope.event.title + ' RSVP' +
+					var link = 'mailto:' + $scope.event.contact +
+						'?subject=' + $scope.event.title + ' RSVP' +
 						'&body='; // + FORMATTED FORM RESULTS
 
-					$location.href = link;
+					$window.location.href = link;
 				};
 
 			});

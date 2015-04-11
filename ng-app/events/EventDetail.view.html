@@ -6,4 +6,7 @@
 	<div>
 		<address>{{event.location}}</address>
 	</div>
+
+	<a ng-if="event.rsvp" class="btn btn-primary" ng-href="{{eventRSVPurl}}">RSVP for this event</a>
+	<div ng-if="!event.rsvp" class="alert alert-warning">RSVP is closed for this event.</div>
 </article>

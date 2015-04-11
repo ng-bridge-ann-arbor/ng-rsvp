@@ -3,7 +3,9 @@ angular
 	.controller('EventDetailCtrl', [
 		'$scope',
 		'eventData',
-		function($scope, eventData) {
+		'$routeParams',
+		function($scope, eventData, $routeParams) {
+			var _eventID = $routeParams.eid;
 
 			/***
 			 * Fetch event data from local JSON
@@ -11,23 +13,10 @@ angular
 			 * @param {function} success callback function
 			 * @returns {object} event data
 			 */
-			eventData.get(function(event) {
-				console.log(event);
+			eventData.get(function(data) {
+				$scope.event = data[_eventID];
 
-				// TODO: get form results and format them nicely for the email body
-
-				$scope.event = event;
-
-				/***
-				 * Form submit function to email the event contact
-				 */
-				$scope.sendMail = function() {
-					var link =	'mailto:' + event.contact +
-						'&subject=' + event.title + ' RSVP' +
-						'&body='; // + FORMATTED FORM RESULTS
-
-					$location.href = link;
-				};
+				console.log($scope.event);
 			});
 		}
 	]);

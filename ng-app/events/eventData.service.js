@@ -11,7 +11,7 @@ angular
 		function($http) {
 			this.get = function(callback) {
 				return $http
-					.get('/ng-app/data/event.data.json')
+					.get('/ng-app/data/events.data.json')
 					.success(callback)
 					.error(function() { console.log('There was an error getting event data.'); });
 			};

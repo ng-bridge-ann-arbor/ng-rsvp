@@ -1,3 +1,9 @@
 <article class="container">
+	<h1>{{event.title}}</h1>
 
+	<div ng-bind-html="event.description | trustAsHtml"></div>
+
+	<div>
+		<address>{{event.location}}</address>
+	</div>
 </article>

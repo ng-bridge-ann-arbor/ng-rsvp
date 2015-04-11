@@ -21,6 +21,10 @@ angular
 					templateUrl: 'ng-app/events/EventDetail.view.html',
 					controller: 'EventDetailCtrl'
 				})
+				.when('/event/:eid/rsvp', {
+					templateUrl: 'ng-app/rsvp/RSVP.view.html',
+					controller: 'RSVPCtrl'
+				})
 				.otherwise({
 					redirectTo: '/'
 				});

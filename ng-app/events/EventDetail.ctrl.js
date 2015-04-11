@@ -17,6 +17,7 @@ angular
 				$scope.event = data[_eventID];
 
 				console.log($scope.event);
+
 			});
 		}
 	]);

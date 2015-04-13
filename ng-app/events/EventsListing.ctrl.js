@@ -5,15 +5,15 @@ angular
 		'eventData',
 		function($scope, eventData) {
 			eventData.get(function(data) {
-
-				$scope.publicEvents = [];
+				$scope.events = [];
 
 				for (var eventID in data) {
 					var thisEvent = data[eventID];
 
+					// TODO: change to a filter
 					if (thisEvent.public) {
-						thisEvent['url'] = '/event/' + eventID;
-						$scope.publicEvents.push(thisEvent);
+						thisEvent.url = '/event/' + eventID;
+						$scope.events.push(thisEvent);
 					}
 				}
 			});

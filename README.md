@@ -14,6 +14,16 @@ An AngularJS RSVP web application.
 - [x] Create JSON file
 - [ ] Add instructional commenting to files
 - [ ] Create event markup from JSON event data
-- [ ] Use route parameter for event ID (for low-level obfuscation)
+- [x] Use route parameter for event ID (for low-level obfuscation)
+- [ ] Description of app on homepage (what is this description?)
+- [ ] Events Listing
+  - [ ] Flesh out listing with more information(?)
+  - [ ] Search field (predicate filter)
 - [ ] Create RSVP form
-  - [ ] Use `mailto:` location link to create and format an email to admin with form contents -OR- localStorage
+  - [ ] Validation & ngMessages
+  - [ ] Modal directive: Form in directive template; use `mailto:` location link to create and format an email to admin 
+  with form contents
+- [ ] Create a server (Node, package.json)
+  - [ ] Remove .htaccess
+  - [ ] Create setup instructions
+  - [ ] Put files in /public folder

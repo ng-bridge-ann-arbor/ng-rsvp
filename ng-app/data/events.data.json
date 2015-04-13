@@ -6,5 +6,13 @@
     "rsvp": true,
     "location": "1234 Some St",
     "contact": "kmaida@enlighten.com"
+  },
+  "b02": {
+    "title": "My Private Event",
+    "description": "<p>A very special occasion that I'd like to celebrate with you!</p><p>Please come and be part of this special event with me.</p>",
+    "public": false,
+    "rsvp": true,
+    "location": "1234 Some St",
+    "contact": "kmaida@enlighten.com"
   }
 }

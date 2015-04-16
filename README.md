@@ -15,6 +15,7 @@ An AngularJS RSVP web application.
 - [ ] Add instructional commenting to files
 - [ ] Create event markup from JSON event data
 - [x] Use route parameter for event ID (for low-level obfuscation)
+  - [ ] Use route resolve for event data
 - [ ] Description of app on homepage (what is this description?)
 - [ ] Events Listing
   - [ ] Flesh out listing with more information(?)

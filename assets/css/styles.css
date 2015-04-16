@@ -6,3 +6,7 @@
 .x-ng-cloak {
     display: none !important;
 }
+
+.showRSVPForm {
+	display: block;
+}

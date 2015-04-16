@@ -7,6 +7,14 @@ angular
 		function($scope, eventData, $routeParams) {
 			var eventID = $routeParams.eid;
 
+			$scope.showForm = false;
+
+			$scope.launchModal = function() {
+				// TODO: this gets backwards / out of sync
+				$scope.showForm = true;
+				console.log('show form:', $scope.showForm);
+			};
+
 			/***
 			 * Fetch event data from local JSON
 			 *
@@ -17,8 +25,6 @@ angular
 				$scope.event = data[eventID];
 
 				console.log($scope.event);
-
-				$scope.eventRSVPurl = '/event/' + eventID + '/rsvp';
 			});
 		}
 	]);

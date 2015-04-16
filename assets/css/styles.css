@@ -1,3 +1,5 @@
+/*----------------------------------------------- AngularJS --*/
+
 [ng\:cloak],
 [ng-cloak],
 [data-ng-cloak],
@@ -7,6 +9,36 @@
     display: none !important;
 }
 
-.showRSVPForm {
-	display: block;
+/*----------------------------------------------- Header --*/
+
+header {
+	background: #444;
+	color: #fff;
+	margin-bottom: 30px;
+}
+nav ul {
+	list-style: outside none;
+	padding-left: 0;
+}
+nav li {
+	display: inline-block;
+	padding: 0 10px;
+}
+nav a,
+nav a:hover,
+nav a:visited,
+nav a:focus {
+	color: #fff;
+	text-decoration: none;
+}
+nav a:hover {
+	text-decoration: underline;
+}
+
+/*----------------------------------------------- Event Detail --*/
+
+/*-- RSVP modal --*/
+
+.modal {
+	background: rgba(0,0,0,.5);
 }

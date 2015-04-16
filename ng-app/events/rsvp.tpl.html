@@ -1,4 +1,4 @@
-<div class="modal" ng-class="{'showRSVPForm': showForm}" ng-if="event.rsvp">
+<div class="modal" ng-class="{'show': showForm}" ng-if="event.rsvp">
 	<div class="modal-dialog">
 		<div class="modal-content">
 
@@ -33,7 +33,8 @@
 						<textarea id="comments" class="form-control" ng-model="guest.comments"></textarea>
 					</div>
 
-					<button class="btn btn-primary" ng-click="sendMail();">Send RSVP</button>
+					<button class="btn btn-default" ng-click="closeModal();">Cancel</button>
+					<button class="btn btn-success" ng-click="sendMail();">Submit RSVP</button>
 				</form>
 
 			</div>

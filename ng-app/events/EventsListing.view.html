@@ -1,9 +1,9 @@
 <article class="container">
-	<h1>Events Listing</h1>
+	<h1>Events</h1>
 
 	<ul>
 		<li ng-repeat="event in events">
-			<a ng-href="{{event.url}}">{{event.title}}</a>
+			<a ng-href="{{event.url}}">{{event.title}}</a> {{event.date}}
 		</li>
 	</ul>
 </article>

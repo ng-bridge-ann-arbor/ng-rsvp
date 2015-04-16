@@ -1,6 +1,8 @@
 <article class="container">
 	<h1>{{event.title}}</h1>
 
+	<p class="date"><strong>Date:</strong> {{event.date}}</p>
+
 	<div ng-bind-html="event.description | trustAsHtml"></div>
 
 	<div>
@@ -8,7 +10,7 @@
 	</div>
 
 	<a ng-if="event.rsvp" class="btn btn-primary" ng-click="launchModal()">RSVP for this event</a>
-	<div ng-if="!event.rsvp" class="alert alert-warning">RSVP is closed for this event.</div>
+	<div ng-if="!event.rsvp" class="alert alert-danger">RSVP is closed for this event.</div>
 
 	<rsvp-form event="event" show-form="showForm"></rsvp-form>
 </article>

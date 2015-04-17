@@ -7,6 +7,10 @@ angular
 			eventData.get(function(data) {
 				$scope.events = [];
 
+				$scope.clearQuery = function() {
+					$scope.query = undefined;
+				};
+
 				for (var eventID in data) {
 					var thisEvent = data[eventID];
 

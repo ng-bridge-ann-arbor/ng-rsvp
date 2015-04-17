@@ -8,8 +8,8 @@
 				<h4 class="modal-title">RSVP for {{event.title}}</h4>
 			</div>
 
-			<div class="modal-body">
-				<form>
+			<form>
+				<div class="modal-body">
 					<div class="form-group form-inline">
 						<label for="name">Name:</label>
 						<input id="name" type="text" class="form-control" placeholder="Name" ng-model="guest.name" required>
@@ -33,11 +33,14 @@
 						<textarea id="comments" class="form-control" ng-model="guest.comments"></textarea>
 					</div>
 
-					<button class="btn btn-default" ng-click="closeModal();">Cancel</button>
-					<button class="btn btn-success" ng-click="sendMail();">Submit RSVP</button>
-				</form>
+				</div>
 
-			</div>
+				<div class="modal-footer">
+					<button class="btn btn-default" ng-click="closeModal();">Cancel</button>
+					<button class="btn btn-success" ng-click="sendMail();">Email RSVP</button>
+				</div>
+			</form>
+
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal-dialog -->
 </div><!-- /.modal -->

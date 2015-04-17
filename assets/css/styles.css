@@ -11,28 +11,15 @@
 
 /*----------------------------------------------- Header --*/
 
-header {
-	background: #444;
-	color: #fff;
-	margin-bottom: 30px;
+header .navbar {
+    border-radius: 0;
 }
-nav ul {
-	list-style: outside none;
-	padding-left: 0;
-}
-nav li {
-	display: inline-block;
-	padding: 0 10px;
-}
-nav a,
-nav a:hover,
-nav a:visited,
-nav a:focus {
-	color: #fff;
-	text-decoration: none;
-}
-nav a:hover {
-	text-decoration: underline;
+
+/*----------------------------------------------- Events Listing --*/
+
+.query-clear {
+    cursor: pointer;
+    margin-left: -20px;
 }
 
 /*----------------------------------------------- Event Detail --*/
@@ -41,4 +28,11 @@ nav a:hover {
 
 .modal {
 	background: rgba(0,0,0,.5);
+}
+
+/*----------------------------------------------- Footer --*/
+
+footer {
+    margin-top: 30px;
+    text-align: center;
 }

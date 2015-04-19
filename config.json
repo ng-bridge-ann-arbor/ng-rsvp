@@ -1,0 +1,6 @@
+{
+    "directoryIndex": "index.html",
+    "webRoot": "./public",
+    "port": 8001,
+    "fileNotFound": "404.html"
+}

@@ -1,0 +1,26 @@
+{
+  "name": "ng-rsvp",
+  "version": "0.0.1",
+  "description": "A (mostly) backend-less AngularJS single-page application that emails an organizer event RSVP responses. Built as an learning tool to teach Angular during ng-bridge workshops.",
+  "main": "ng-rsvp.js",
+  "dependencies": {
+    "node-mime": "^1.0.0"
+  },
+  "devDependencies": {
+    "mime": "^1.3.4"
+  },
+  "scripts": {
+    "start": "node ng-rsvp.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ng-bridge-ann-arbor/ng-rsvp.git"
+  },
+  "author": "Kim Maida & Mike Behnke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ng-bridge-ann-arbor/ng-rsvp/issues"
+  },
+  "homepage": "https://github.com/ng-bridge-ann-arbor/ng-rsvp"
+}

@@ -21,8 +21,12 @@ angular
 					templateUrl: 'ng-app/events/EventDetail.view.html',
 					controller: 'EventDetailCtrl'
 				})
+				.when('/404', {
+					templateUrl: 'ng-app/404/404.view.html',
+					controller: 'FileNotFoundCtrl'
+				})
 				.otherwise({
-					redirectTo: '/'
+					redirectTo: '/404'
 				});
 
 			$locationProvider

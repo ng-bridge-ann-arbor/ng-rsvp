@@ -6,13 +6,28 @@
 				<button type="button" class="close" ng-click="closeModal()"
 						aria-label="Close"><span aria-hidden="true">&times;</span></button>
 				<h4 class="modal-title">RSVP for {{event.title}}</h4>
+
+				<dl class="event-info">
+					<dt><i class="fa fa-calendar"></i> <strong>Date:</strong></dt>
+					<dd>{{event.date}}</dd>
+
+					<dt><i class="fa fa-map-marker"></i> <strong>Location:</strong></dt>
+					<dd>{{event.location}}</dd>
+				</dl>
 			</div>
 
-			<form>
+			<form name="rsvpForm">
 				<div class="modal-body">
 					<div class="form-group form-inline">
 						<label for="name">Name:</label>
-						<input id="name" type="text" class="form-control" placeholder="Name" ng-model="guest.name" required>
+						<input id="name" type="text" class="form-control" placeholder="Name" name="name"
+							   ng-model="guest.name"
+							   required>
+
+						<div ng-if="rsvpForm.name.$dirty && rsvpForm.name.$invalid"
+							 ng-messages="rsvpForm.name.$error" class="text-danger">
+							<span ng-message="required">Name is required</span>
+						</div>
 					</div>
 
 					<div class="form-group">
@@ -37,7 +52,7 @@
 
 				<div class="modal-footer">
 					<button class="btn btn-default" ng-click="closeModal();">Cancel</button>
-					<button class="btn btn-success" ng-click="sendMail();">Email RSVP</button>
+					<button class="btn btn-success" ng-click="sendMail();" ng-disabled="rsvpForm.$invalid">Email RSVP</button>
 				</div>
 			</form>
 

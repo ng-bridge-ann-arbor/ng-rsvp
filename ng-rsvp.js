@@ -15,8 +15,8 @@ var config = JSON.parse(fs.readFileSync('./config.json', {encoding: 'utf-8'}));
  */
 function handleHttpRequest(req, res) {
 	var targetPath, readStream, extension;
-	var pathIndex = path.normalize(config.webRoot + '\\' + config.directoryIndex);
-	var path404 = path.normalize(config.webRoot + '\\' + config.fileNotFound);
+	var pathIndex = path.normalize(config.webRoot + '/' + config.directoryIndex);
+	var path404 = path.normalize(config.webRoot + '/' + config.fileNotFound);
 
 	try {
 		// Log as long as it isn't disabled via the config file

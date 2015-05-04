@@ -1,18 +1,13 @@
 <article class="container">
 	<h1>{{event.title}}</h1>
 
-	<dl class="event-info">
-		<dt><i class="fa fa-calendar"></i> <strong>Date:</strong></dt>
-		<dd>{{event.date}}</dd>
+	<div ng-include="'/ng-app/events/eventInfo.tpl.html'"></div>
 
-		<dt><i class="fa fa-map-marker"></i> <strong>Location:</strong></dt>
-		<dd>{{event.location}}</dd>
-	</dl>
+	<div ng-bind-html="event.description"></div>
 
-	<div ng-bind-html="event.description | trustAsHtml"></div>
-
-	<a ng-if="event.rsvp" class="btn btn-primary" ng-click="launchModal()">RSVP for this event</a>
-	<div ng-if="!event.rsvp" class="alert alert-danger">RSVP is closed for this event.</div>
+	<a ng-if="event.rsvp" class="btn btn-primary"
+	   ng-click="launchModal()">RSVP for this event</a>
+	<div ng-if="!event.rsvp" class="alert alert-danger"><i class="fa fa-ban"></i> RSVP is closed for this event.</div>
 
 	<rsvp-form event="event" show-form="showForm"></rsvp-form>
 </article>

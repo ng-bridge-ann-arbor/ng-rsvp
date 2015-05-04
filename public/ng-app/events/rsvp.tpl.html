@@ -7,13 +7,7 @@
 						aria-label="Close"><span aria-hidden="true">&times;</span></button>
 				<h4 class="modal-title">RSVP for {{event.title}}</h4>
 
-				<dl class="event-info">
-					<dt><i class="fa fa-calendar"></i> <strong>Date:</strong></dt>
-					<dd>{{event.date}}</dd>
-
-					<dt><i class="fa fa-map-marker"></i> <strong>Location:</strong></dt>
-					<dd>{{event.location}}</dd>
-				</dl>
+				<div ng-include="'/ng-app/events/eventInfo.tpl.html'"></div>
 			</div>
 
 			<form name="rsvpForm" novalidate>
@@ -74,7 +68,8 @@
 
 				<div class="modal-footer">
 					<button class="btn btn-default" ng-click="closeModal();">Cancel</button>
-					<button class="btn btn-success" ng-click="sendMail();" ng-disabled="rsvpForm.$invalid">Email RSVP</button>
+					<button class="btn btn-success" ng-click="sendMail();" ng-disabled="rsvpForm.$invalid"><i
+							class="fa fa-envelope-o"></i> Email RSVP</button>
 				</div>
 			</form>
 

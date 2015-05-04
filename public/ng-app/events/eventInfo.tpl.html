@@ -1,0 +1,10 @@
+<dl class="event-info">
+	<dt><i class="fa fa-calendar"></i> <strong>Date:</strong></dt>
+	<dd>{{event.date}}</dd>
+
+	<dt ng-if="event.time"><i class="fa fa-clock-o"></i> <strong>Time:</strong></dt>
+	<dd ng-if="event.time">{{event.time.start}} - {{event.time.end}}</dd>
+
+	<dt><i class="fa fa-map-marker"></i> <strong>Location:</strong></dt>
+	<dd>{{event.location}}</dd>
+</dl>

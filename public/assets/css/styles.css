@@ -24,6 +24,23 @@ header .navbar {
 
 /*----------------------------------------------- Event Detail --*/
 
+/*-- Event format --*/
+
+.event-info {
+	margin: 10px 0;
+}
+.event-info dt, .event-info dd {
+	display: inline;
+}
+.event-info dt i {
+	text-align: center;
+	width: 16px;
+}
+.event-info dd:after {
+	content: '\A';
+	white-space: pre;
+}
+
 /*-- RSVP modal --*/
 
 .modal {

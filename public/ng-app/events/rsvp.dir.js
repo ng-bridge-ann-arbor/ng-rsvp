@@ -7,6 +7,7 @@ angular
 				$scope.guest = {};
 				$scope.guest.guests = 1;
 
+				// format the email body for display in the visitor's email client
 				function _formatEmailBody(formObj) {
 					var emailBodyStr;
 
@@ -18,9 +19,7 @@ angular
 					return encodeURI(emailBodyStr);
 				}
 
-				/***
-				 * Form submit function to email the event contact
-				 */
+				// form submit function to email the event contact
 				$scope.sendMail = function() {
 					var windowFeatures = 'menubar=no,location=yes,resizable=yes,scrollbars=yes,status=yes,width=500,height=400,left=100,top=100',
 						link = 'mailto:' + $scope.event.contact +
@@ -35,6 +34,7 @@ angular
 			}
 
 			function rsvpLink($scope, $elem, $attrs) {
+				// close the RSVP modal window
 				$scope.closeModal = function() {
 					$scope.showForm = false;
 				}

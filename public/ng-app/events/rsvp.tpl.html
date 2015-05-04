@@ -16,18 +16,21 @@
 				</dl>
 			</div>
 
-			<form name="rsvpForm">
+			<form name="rsvpForm" novalidate>
 				<div class="modal-body">
 					<p class="text-danger">* <small>required</small></p>
 
 					<div class="form-group form-inline">
 						<label for="name">Name:<span class="text-danger">*</span></label>
-						<input id="name" type="text" class="form-control" placeholder="Name" name="name"
+						<input id="name"
+							   type="text"
+							   class="form-control"
+							   placeholder="Name"
+							   name="name"
 							   ng-model="guest.name"
 							   required>
 
-						<div ng-if="rsvpForm.name.$dirty && rsvpForm.name.$invalid"
-							 ng-messages="rsvpForm.name.$error" class="text-danger">
+						<div ng-if="rsvpForm.name.$dirty && rsvpForm.name.$invalid" ng-messages="rsvpForm.name.$error" class="text-danger">
 							<span ng-message="required">Name is required</span>
 						</div>
 					</div>
@@ -62,7 +65,9 @@
 
 					<div class="form-group">
 						<label for="comments">Comments:</label>
-						<textarea id="comments" class="form-control" ng-model="guest.comments"></textarea>
+						<textarea id="comments"
+								  class="form-control"
+								  ng-model="guest.comments"></textarea>
 					</div>
 
 				</div>

@@ -34,7 +34,7 @@
     },
     "description": "<p>A wonderful time shall be had by all.</p>",
     "public": true,
-    "rsvp": false,
+    "rsvp": true,
     "location": "1234 Some St",
     "contact": "kmaida@enlighten.com"
   },
@@ -47,7 +47,7 @@
     },
     "description": "<p>A very special occasion that I'd like to celebrate with you!</p><p>Please come and be part of this special event with me.</p>",
     "public": false,
-    "rsvp": false,
+    "rsvp": true,
     "location": "1234 Some St",
     "contact": "kmaida@enlighten.com"
   }

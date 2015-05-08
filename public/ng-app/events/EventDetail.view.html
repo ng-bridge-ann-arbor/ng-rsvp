@@ -5,9 +5,9 @@
 
 	<div ng-bind-html="event.description"></div>
 
-	<a ng-if="event.rsvp" class="btn btn-primary"
+	<a ng-if="event.rsvp && event.upcoming" class="btn btn-primary"
 	   ng-click="launchModal()">RSVP for this event</a>
-	<div ng-if="!event.rsvp" class="alert alert-danger"><i class="fa fa-ban"></i> RSVP is closed for this event.</div>
+	<div ng-if="!event.rsvp || !event.upcoming" class="alert alert-danger"><i class="fa fa-warning"></i> {{!event.upcoming ? 'This event has ended!' : 'RSVP is closed.'}}</div>
 
 	<rsvp-form event="event" show-form="showForm"></rsvp-form>
 </article>

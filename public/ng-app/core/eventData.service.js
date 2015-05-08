@@ -13,6 +13,7 @@ angular
 			// build JS dates and add them to the data
 			function _getJSDates(response) {
 				var data = response.data;
+				var _now = new Date().getTime();
 
 				// take a Date, hours, and minutes and create a new Date object
 				function _buildDate(date, hours, minutes) {
@@ -29,13 +30,19 @@ angular
 					var _startTimeArr = event.time.start.split(':');
 					var _startTimeHours = _startTimeArr[0];
 					var _startTimeMinutes = _startTimeArr[1];
+					var startDatetime = _buildDate(_jsDate, _startTimeHours, _startTimeMinutes);
 					// end time
 					var _endTimeArr = event.time.end.split(':');
 					var _endTimeHours = _endTimeArr[0];
 					var _endTimeMinutes = _endTimeArr[1];
+					var endDatetime = _buildDate(_jsDate, _endTimeHours, _endTimeMinutes);
+					// event is in the future
+					var upcoming = _now < startDatetime.getTime();
 
-					event.time.startDatetime = _buildDate(_jsDate, _startTimeHours, _startTimeMinutes);
-					event.time.endDatetime = _buildDate(_jsDate, _endTimeHours, _endTimeMinutes);
+					event.time.startDatetime = startDatetime;
+					event.time.endDatetime = endDatetime;
+					event.upcoming = upcoming;
+					event.rsvp = !upcoming ? upcoming : event.rsvp;
 				});
 
 				return data;

@@ -1,9 +1,9 @@
 <dl class="event-info">
 	<dt><i class="fa fa-calendar"></i> <strong>Date:</strong></dt>
-	<dd>{{event.time.startDatetime | date:'mediumDate'}}</dd>
+	<dd ng-class="{'text-danger': !event.upcoming}">{{event.time.startDatetime | date:'mediumDate'}}</dd>
 
 	<dt><i class="fa fa-clock-o"></i> <strong>Time:</strong></dt>
-	<dd>{{event.time.startDatetime | date:'shortTime'}} - {{event.time.endDatetime | date:'shortTime'}}</dd>
+	<dd ng-class="{'text-danger': !event.upcoming}">{{event.time.startDatetime | date:'shortTime'}} - {{event.time.endDatetime | date:'shortTime'}}</dd>
 
 	<dt><i class="fa fa-map-marker"></i> <strong>Location:</strong></dt>
 	<dd>{{event.location}}</dd>

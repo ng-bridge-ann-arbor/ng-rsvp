@@ -6,6 +6,7 @@ angular
 		'$routeParams',
 		function($scope, eventData, $routeParams) {
 			var eventID = $routeParams.eid;
+			var _now = new Date().getTime();
 
 			$scope.showForm = false;
 
@@ -15,8 +16,6 @@ angular
 
 			eventData.get().then(function(data) {
 				$scope.event = data[eventID];
-
-				console.log($scope.event);
 			});
 		}
 	]);

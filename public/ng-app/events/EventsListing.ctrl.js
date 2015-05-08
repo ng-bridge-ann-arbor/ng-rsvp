@@ -4,7 +4,7 @@ angular
 		'$scope',
 		'eventData',
 		function($scope, eventData) {
-			eventData.get(function(data) {
+			eventData.get().then(function(data) {
 				$scope.events = [];
 
 				$scope.clearQuery = function() {

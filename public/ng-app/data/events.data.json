@@ -3,8 +3,8 @@
     "title": "My Special Event",
     "date": "June 12, 2015",
     "time": {
-      "start": "1pm",
-      "end": "5pm"
+      "start": "13:00",
+      "end": "17:30"
     },
     "description": "<p>A very special occasion that I'd like to celebrate with you!</p><p>Please come and be part of this special event with me.</p>",
     "public": true,
@@ -15,6 +15,10 @@
   "a02": {
     "title": "Birthday Party",
     "date": "April 29, 2015",
+    "time": {
+      "start": "11:00",
+      "end": "15:30"
+    },
     "description": "<p>There will be cake and clowns.</p>",
     "public": true,
     "rsvp": true,
@@ -24,6 +28,10 @@
   "a03": {
     "title": "Anniversary",
     "date": "May 25, 2015",
+    "time": {
+      "start": "10:00",
+      "end": "18:45"
+    },
     "description": "<p>A wonderful time shall be had by all.</p>",
     "public": true,
     "rsvp": false,
@@ -33,6 +41,10 @@
   "b02": {
     "title": "My Private Event",
     "date": "May 20, 2015",
+    "time": {
+      "start": "9:00",
+      "end": "12:00"
+    },
     "description": "<p>A very special occasion that I'd like to celebrate with you!</p><p>Please come and be part of this special event with me.</p>",
     "public": false,
     "rsvp": false,

@@ -13,13 +13,7 @@ angular
 				$scope.showForm = true;
 			};
 
-			/***
-			 * Fetch event data from local JSON
-			 *
-			 * @param {function} success callback function
-			 * @returns {object} event data
-			 */
-			eventData.get(function(data) {
+			eventData.get().then(function(data) {
 				$scope.event = data[eventID];
 
 				console.log($scope.event);

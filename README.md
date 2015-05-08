@@ -1,6 +1,6 @@
-# ng-RSVP
+# ng-rsvp
 
-An AngularJS RSVP web application.
+A simple, backend-less AngularJS single-page application that emails an organizer event RSVP responses.
 
 ## Setup and Requirements
 
@@ -15,14 +15,10 @@ An AngularJS RSVP web application.
 ## To Do
 
 - [ ] Add instructional commenting to files
-- [ ] Use controller activate format(?)
 - [x] Description of app on homepage
-- [ ] Add start and end times to events and transform appropriately to create Dates (??)
+- [x] Add start and end times to events and transform appropriately to create Dates
 - [ ] Turn off ability to RSVP after the event is over (end time on date) automatically (???)
 - [x] Create RSVP form
-  - [x] Validation & ngMessages
-  - [x] Modal directive: Form in directive template; use `mailto:` location link to create and format an email to admin 
-  with form contents
 - [x] Create a server (Node, package.json)
   - [x] Remove .htaccess
   - [x] Create setup instructions

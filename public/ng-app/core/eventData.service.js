@@ -10,15 +10,19 @@ angular
 		'$http',
 		function($http) {
 
+			// build JS dates and add them to the data
 			function _getJSDates(response) {
 				var data = response.data;
 
+				// take a Date, hours, and minutes and create a new Date object
 				function _buildDate(date, hours, minutes) {
 					var _timestamp = date.setHours(hours, minutes);
 
 					return new Date(_timestamp);
 				}
 
+				// iterate over each event in data
+				// add Date object for start date/time and end date/time
 				angular.forEach(data, function(event, i) {
 					var _jsDate = new Date(event.date);
 					// start time
@@ -37,10 +41,12 @@ angular
 				return data;
 			}
 
+			// error getting data
 			function _error(error) {
 				console.log('There was an error getting event data.');
 			}
 
+			// returns {function} $http promise
 			this.get = function() {
 				return $http
 					.get('/ng-app/data/events.data.json')

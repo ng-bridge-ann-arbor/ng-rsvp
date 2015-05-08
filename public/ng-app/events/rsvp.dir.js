@@ -3,6 +3,7 @@ angular
 	.directive('rsvpForm', [
 		function() {
 
+			// rsvpForm controller function
 			function rsvpCtrl($scope) {
 				$scope.guest = {};
 				$scope.guest.guests = 1;
@@ -33,6 +34,7 @@ angular
 
 			}
 
+			// rsvpForm link function
 			function rsvpLink($scope, $elem, $attrs) {
 				// close the RSVP modal window
 				$scope.closeModal = function() {

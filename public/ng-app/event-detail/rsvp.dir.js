@@ -6,10 +6,13 @@ angular
 			// rsvpForm controller function
 			function rsvpCtrl($scope) {
 				$scope.guest = {};
-				$scope.guest.guests = 1;
+				$scope.guest.guests = 1; // default number of guests to 1
+			}
 
+			// rsvpForm link function
+			function rsvpLink($scope, $elem, $attrs) {
 				// format the email body for display in the visitor's email client
-				function _formatEmailBody(formObj) {
+				function formatEmailBody(formObj) {
 					var emailBodyStr;
 
 					emailBodyStr = 'Name: ' + formObj.name + '\n';
@@ -25,21 +28,17 @@ angular
 					var windowFeatures = 'menubar=no,location=yes,resizable=yes,scrollbars=yes,status=yes,width=500,height=400,left=100,top=100',
 						link = 'mailto:' + $scope.event.contact +
 						'?subject=' + $scope.event.title + ' RSVP' +
-						'&body=' + _formatEmailBody($scope.guest); // + FORMATTED FORM RESULTS
+						'&body=' + formatEmailBody($scope.guest);
 
 					window.open(link, 'EmailRSVP', windowFeatures);
 
 					$scope.showForm = false;
 				};
 
-			}
-
-			// rsvpForm link function
-			function rsvpLink($scope, $elem, $attrs) {
 				// close the RSVP modal window
 				$scope.closeModal = function() {
 					$scope.showForm = false;
-				}
+				};
 			}
 
 			return {
@@ -51,6 +50,6 @@ angular
 				templateUrl: 'ng-app/event-detail/rsvp.tpl.html',
 				controller: rsvpCtrl,
 				link: rsvpLink
-			}
+			};
 		}
 	]);

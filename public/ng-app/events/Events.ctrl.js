@@ -22,6 +22,6 @@ angular
 			// link the table rows to event detail URL
 			$scope.linkRow = function(eventPath) {
 				$location.path(eventPath);
-			}
+			};
 		}
 	]);

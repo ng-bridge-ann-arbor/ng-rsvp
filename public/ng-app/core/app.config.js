@@ -22,8 +22,7 @@ angular
 					controller: 'EventDetailCtrl'
 				})
 				.when('/404', {
-					templateUrl: 'ng-app/404/404.view.html',
-					controller: 'FileNotFoundCtrl'
+					templateUrl: 'ng-app/404/404.view.html'
 				})
 				.otherwise({
 					redirectTo: '/404'

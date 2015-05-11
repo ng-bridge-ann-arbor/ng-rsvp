@@ -32,17 +32,17 @@ A simple, backend-less AngularJS single-page application that emails an organize
   },
 ``` 
 
-* Event object ID `alphanumeric`, `unique`
- * title `string`
- * date `string`, can be parsed by [Date.parse()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse)
- * time `object`
-   * start `string` in 24 hour time
-   * end `string` in 24 hour time
- * description `string`, can contain simple `HTML`
- * public `boolean`, indicates if event should be listed on main page
- * rsvp `boolean`, show RSVP form
- * location `string`
- * contact `string`, email address to send RSVPs to
+* Event object ID `string`, alphanumeric, unique
+  * title `string`
+  * date `string`, can be parsed by [Date.parse()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse)
+  * time `object`
+    * start `string` in 24 hour time 
+    * end `string` in 24 hour time 
+  * description `string`, can contain simple `HTML`
+  * public `boolean`, indicates if event should be listed on main page
+  * rsvp `boolean`, show RSVP form
+  * location `string`
+  * contact `string`, email address to send RSVPs to
    
 
 ## To Do

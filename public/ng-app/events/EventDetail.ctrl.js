@@ -9,10 +9,12 @@ angular
 
 			$scope.showForm = false;
 
+			// show the RSVP modal
 			$scope.launchModal = function() {
 				$scope.showForm = true;
 			};
 
+			// get data for this event
 			eventData.get().then(function(data) {
 				$scope.event = data[eventID];
 			});

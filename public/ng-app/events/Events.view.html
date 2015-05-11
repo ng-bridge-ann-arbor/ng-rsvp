@@ -1,30 +1,38 @@
 <article class="container">
 	<h1>Events</h1>
 
-	<p class="lead">The following events are available to the public.</p>
-
-	<div class="form-group form-inline">
-		<label for="query">Search:</label>
-		<input id="query" type="text" class="form-control" ng-model="query" />
-		<span ng-if="query" class="query-clear text-muted" ng-click="clearQuery()">&times;</span>
+	<div ng-if="events && !events.length" class="alert alert-danger">
+		<i class="fa fa-warning"></i> No events available.
 	</div>
 
-	<table class="table table-responsive">
-		<thead>
-			<tr>
-				<th>Date</th>
-				<th>Event</th>
-				<th>Details</th>
-				<th>RSVP</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr ng-repeat="event in events | orderBy:'time.startDatetime' | filter:query" ng-class="{'danger': !event.rsvp, 'text-muted': !event.rsvp}">
-				<td>{{event.time.startDatetime | date:'shortDate'}}</td>
-				<td><strong>{{event.title}}</strong></td>
-				<td><a ng-href="{{event.url}}">View</a></td>
-				<td><strong ng-if="event.rsvp" class="text-success">Open</strong><em ng-if="!event.rsvp" class="text-danger">Closed</em></td>
-			</tr>
-		</tbody>
-	</table>
+	<div ng-if="events && events.length">
+		<p class="lead">The following events are available to the public. Click on an event to view details.</p>
+
+		<div class="form-group form-inline">
+			<div class="input-group">
+				<span class="input-group-addon"><i class="fa fa-search"></i></span>
+				<input id="query" type="text" class="form-control" ng-model="query" placeholder="Search events" />
+				<span class="input-group-btn">
+					<button class="btn btn-default" ng-disabled="!query" ng-click="query=''">&times;</button>
+				</span>
+			</div>
+		</div>
+
+		<table class="eventTable table table-responsive">
+			<thead>
+				<tr>
+					<th>Date</th>
+					<th>Event</th>
+					<th>RSVP</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="event in events | orderBy:'time.startDatetime' | filter:query" ng-class="{'danger': !event.rsvp, 'text-muted': !event.rsvp}" class="eventTable-row" ng-click="linkRow(event.url)">
+					<td>{{event.time.startDatetime | date:'shortDate'}}</td>
+					<td><strong>{{event.title}}</strong></td>
+					<td><strong ng-if="event.rsvp" class="text-success">Open</strong><em ng-if="!event.rsvp" class="text-danger">Closed</em></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </article>

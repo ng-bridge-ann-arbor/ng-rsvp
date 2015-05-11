@@ -14,7 +14,9 @@
 a,
 a:hover,
 button,
-button:hover {
+button:hover,
+.eventTable-row,
+.eventTable-row:hover {
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
     transition: all 200ms ease;
@@ -29,8 +31,13 @@ header .navbar {
 /*----------------------------------------------- Events Listing --*/
 
 .query-clear {
+
+}
+.eventTable-row {
     cursor: pointer;
-    margin-left: -20px;
+}
+.eventTable-row:hover {
+    background: #eee;
 }
 
 /*----------------------------------------------- Event Detail --*/

@@ -3,12 +3,8 @@ angular
 	.controller('EventsCtrl', [
 		'$scope',
 		'eventData',
-		function($scope, eventData) {
-			// clear search query
-			$scope.clearQuery = function() {
-				$scope.query = undefined;
-			};
-
+		'$location',
+		function($scope, eventData, $location) {
 			// get event data and add URL / show public
 			eventData.get().then(function(data) {
 				$scope.events = [];
@@ -22,5 +18,10 @@ angular
 					}
 				}
 			});
+
+			// link the table rows to event detail URL
+			$scope.linkRow = function(eventPath) {
+				$location.path(eventPath);
+			}
 		}
 	]);

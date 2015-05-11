@@ -4,12 +4,12 @@ angular
 		'$scope',
 		'eventData',
 		function($scope, eventData) {
+			$scope.clearQuery = function() {
+				$scope.query = undefined;
+			};
+
 			eventData.get().then(function(data) {
 				$scope.events = [];
-
-				$scope.clearQuery = function() {
-					$scope.query = undefined;
-				};
 
 				for (var eventID in data) {
 					var thisEvent = data[eventID];

@@ -14,11 +14,11 @@ angular
 					controller: 'HomeCtrl'
 				})
 				.when('/events', {
-					templateUrl: 'ng-app/events/EventsListing.view.html',
-					controller: 'EventsListingCtrl'
+					templateUrl: 'ng-app/events/Events.view.html',
+					controller: 'EventsCtrl'
 				})
 				.when('/event/:eid', {
-					templateUrl: 'ng-app/events/EventDetail.view.html',
+					templateUrl: 'ng-app/event-detail/EventDetail.view.html',
 					controller: 'EventDetailCtrl'
 				})
 				.when('/404', {

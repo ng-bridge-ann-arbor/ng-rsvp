@@ -40,7 +40,8 @@ header .navbar {
 .event-info {
 	margin: 10px 0;
 }
-.event-info dt, .event-info dd {
+.event-info dt,
+.event-info dd {
 	display: inline;
 }
 .event-info dt i {

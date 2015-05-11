@@ -1,6 +1,6 @@
 angular
 	.module('myApp')
-	.controller('EventsListingCtrl', [
+	.controller('EventsCtrl', [
 		'$scope',
 		'eventData',
 		function($scope, eventData) {

@@ -48,7 +48,7 @@ angular
 					event: '=',
 					showForm: '='
 				},
-				templateUrl: 'ng-app/events/rsvp.tpl.html',
+				templateUrl: 'ng-app/event-detail/rsvp.tpl.html',
 				controller: rsvpCtrl,
 				link: rsvpLink
 			}
